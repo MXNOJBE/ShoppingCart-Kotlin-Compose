@@ -16,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -58,6 +59,7 @@ fun CartItem(
                 Text(
                     text = item.productName,
                     fontWeight = FontWeight.Normal,
+                    color = MaterialTheme.colorScheme.onBackground,
                     fontSize = dimensionResource(id = R.dimen.text_size_small).value.sp
                 )
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_small)))
@@ -98,6 +100,7 @@ fun CartItem(
                 Text(
                     modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_large)),
                     fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.background,
                     fontSize = dimensionResource(id = R.dimen.text_size_large).value.sp,
                     text = (mapCount[item.productId] ?: 0).toString()
                 )

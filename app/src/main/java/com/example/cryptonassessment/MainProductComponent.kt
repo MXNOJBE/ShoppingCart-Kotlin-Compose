@@ -1,5 +1,7 @@
 package com.example.cryptonassessment
 
+
+import CartSection
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -9,7 +11,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.cryptonassessment.cart.CartSection
 import com.example.cryptonassessment.products.ProductCategorySliderRow
 import com.example.cryptonassessment.products.ProductGridComponent
 import com.example.cryptonassessment.products.ProductItem
@@ -34,8 +35,6 @@ fun MainProductCard(innerPadding: PaddingValues) {
     var itemsList by remember { mutableStateOf(vegproductsList) }
 
     var searchQuery by remember { mutableStateOf("") }
-
-    var selectedColor by remember { mutableStateOf("") }
 
     categoryMap = mapOf(
         "Veg Products" to vegproductsList,

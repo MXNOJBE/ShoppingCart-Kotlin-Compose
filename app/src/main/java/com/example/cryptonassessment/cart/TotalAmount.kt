@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -32,11 +33,13 @@ fun TotalAmount(totalAmount: Double) {
         ) {
             Text(
                 text = "Total",
+                color = MaterialTheme.colorScheme.background,
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp
             )
             Text(
                 text = "$${String.format("%.2f", totalAmount)}",
+                color = MaterialTheme.colorScheme.background,
                 fontWeight = FontWeight.Black,
                 fontSize = 32.sp
             )
